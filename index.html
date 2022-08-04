@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>행맨 게임</title>
+    <script src="play.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      * {
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+      }
+
+      body {
+        background: rgb(62, 50, 68);
+      }
+
+      img {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      main {
+        width: 60vw;
+        height: 55vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: rgb(51, 45, 54);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+
+      }
+
+      h1 {
+        font: normal 40px/1 "Press Start 2P";
+        letter-spacing: 3px;
+        color: #fff;
+        padding-top: 40px;
+      }
+      
+
+      #clue {
+        width: 70vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        color: rgb(228, 218, 233);
+        font: normal 20px/1 "arial";
+      }
+
+      #mean {
+        width: 50vw;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      input {
+        width: 20vw;
+        height: 5vh;
+      }
+
+      #guessbutton {
+        position: absolute;
+        padding: 10px;
+        top: 55%;
+        left: 68%;
+        font: bold 14px/1 "arial";
+      }
+
+      #start {
+        width: 110px;
+        padding: 15px;
+        position: absolute;
+        top: 75%;
+        left: 44%;
+        font: bold 15px/1 "arial";
+      }
+
+      #hguessstr {
+        position: absolute;
+        top: 40%;
+        width: 20vw;
+        height: 10px;
+        color: #fff;
+      }
+
+
+      
+
+    </style>
+
+  </head>
+  <body>
+    <img src="b.jpg" alt="배경">
+     <main>
+          <h1>HANGHAN</h1>
+          <div id="clue">게임시작 버튼을 눌러 게임을 시작하세요.</div><br>
+          <div id="mean">
+              <input id="hguess" type="text" size="1" maxlength="1" />
+
+              <button id="guessbutton" onclick="guessLetter();"> 입력 </button>
+          </div>
+
+        <button id="start" onclick="newGame();">게임시작</button>
+        <div id="hguessstr"></div>
+  </main>
+  </body>
+</html>
